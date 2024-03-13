@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Main</title>
+  </head>
+
+  <body>
+    <div class="main-layout">
+      <div class="main-header">
+        <div class="main-inner-header">
+          <span>Exclusive</span>
+          <div class="middle-section">
+            <ul>
+              <li>Home</li>
+              <li>Contact</li>
+              <li>About</li>
+              <li>Sign Up</li>
+            </ul>
+          </div>
+          <div class="right-section">
+            <div class="input-box">
+              <input
+                type="text"
+                name="search"
+                id="input-search-product"
+                placeholder="What are you looking for?"
+              />
+              <img
+                src="../assets/search.png"
+                alt="search"
+                onclick="searchProduct()"
+              />
+            </div>
+            <div class="like-box">
+              <img src="../assets/wishlist.png" alt="like" />
+            </div>
+            <div class="cart-box">
+              <img src="../assets/cart.png" alt="cart" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-body">
+        <div class="category-banner">
+          <div class="category-box" id="categoryBox"></div>
+          <div class="banner-section">
+            <div class="image-box">
+              <img src="../assets/banner.png" alt="banner" />
+            </div>
+          </div>
+        </div>
+
+        <div class="today-pruduct">
+          <div class="container-title">
+            <span><img src="../assets/rectangle.png" alt="rectangle" /></span>
+            <span>Today's</span>
+          </div>
+
+          <div class="flash-sale-box">
+            <div class="flash-left">
+              <span style="font-size: 36px">Flash Sales</span>
+              <div class="timer-container">
+                <div class="timer-item">
+                  <span>Days</span>
+                  <span class="timer-number">03 :</span>
+                </div>
+                <div class="timer-item">
+                  <span>Hours</span>
+                  <span class="timer-number">23 :</span>
+                </div>
+                <div class="timer-item">
+                  <span>Minutes</span>
+                  <span class="timer-number">29 :</span>
+                </div>
+                <div class="timer-item">
+                  <span>Seconds</span>
+                  <span class="timer-number">56</span>
+                </div>
+              </div>
+              <div class="flash-right">
+                <span>
+                  <img src="../assets/leftarrow.png" alt="arrow" />
+                </span>
+                <span>
+                  <img src="../assets/rightarrow.png" alt="arrow" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-list" id="productList">
+            <!-- <div class="product-container" id="productContainer">
+              <div class="product-top" id="productTop">
+                <div class="product-image" id="productImage">
+                  <img src="../assets/joystick.png" alt="joystick" />
+                </div>
+                <span class="product-discount" id="productDiscount">-40%</span>
+                <div class="product-show-hide" id="productShowHide">
+                  <img src="../assets/heart.png" alt="heart" />
+                  <img src="../assets/eye.png" alt="eye" />
+                </div>
+              </div>
+              <div class="product-name" id="productName">
+                <span>HAVIT HV-G92 Gamepad</span>
+                <div class="product-price" id="productPrice">
+                  <span class="discount-price" id="discountPrice">$120</span>
+                  <span class="price"><del>$160</del></span>
+                </div>
+                <div class="product-ranking" id="productRanking">
+                  <span>***** (86)</span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="submit-btn">View All Products</div>
+
+        <div class="product-icon">
+          <div class="icon-title">
+            <img src="../assets/rectangle.png" alt="rectangle" />
+            <span>Categories</span>
+          </div>
+          <div class="icon-container">
+            <div class="icon-left">
+              <span>Browse By Category</span>
+            </div>
+            <div class="icon-right">
+              <img src="../assets/leftarrow.png" alt="leftarrow" />
+              <img src="../assets/rightarrow.png" alt="rightarrow" />
+            </div>
+          </div>
+
+          <div class="icon-bottom" id="iconBottom">
+            <!-- <div class="icon-box" id="iconBox">
+              <div class="icon-image" id="iconImage">
+                <img src="../assets/phone.png" alt="phone" />
+              </div>
+              <span class="">Phones</span>
+            </div> -->
+
+            <!-- <div class="icon-box">
+            <div class="icon-image">
+              <img src="../assets/c_omputer.png" alt="c_omputer" />
+            </div>
+            <span>Computer</span>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon-image">
+              <img src="../assets/smartWatch.png" alt="c_omputer" />
+            </div>
+            <span>SmartWatch</span>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon-camera">
+              <img src="../assets/camera.png" alt="camera" />
+            </div>
+            <span>Camera</span>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon-image">
+              <img src="../assets//headphone.png" alt="headphone" />
+            </div>
+            <span>Headphones</span>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon-image">
+              <img src="../assets/gamepad.png" alt="gamepad" />
+            </div>
+            <span>Gamepad</span>
+           </div>
+          </div>-->
+          </div>
+
+          <div class="new-arrival-container">
+            <div class="featured-title">
+              <img src="../assets/rectangle.png" alt="rectangle" />
+              <span>Featured</span>
+            </div>
+            <div class="text-primary">
+              <span>New Arrival</span>
+            </div>
+            <div class="new-arrival-box">
+              <div class="collection-images"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer"></div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
