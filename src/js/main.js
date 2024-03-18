@@ -55,7 +55,7 @@ const productList = [
     review: "86",
     image: "",
     saleAmount: "0",
-    isOnSale: "false",
+    isOnSale: true,
   },
   {
     id: "2",
@@ -65,7 +65,7 @@ const productList = [
     review: "75",
     image: "",
     saleAmount: "0",
-    isOnSale: "false",
+    isOnSale: true,
   },
   {
     id: "3",
@@ -75,7 +75,7 @@ const productList = [
     review: "99",
     image: "",
     saleAmount: "0",
-    isOnSale: "false",
+    isOnSale: true,
   },
   {
     id: "4",
@@ -85,15 +85,15 @@ const productList = [
     review: "99",
     image: "",
     saleAmount: "0",
-    isOnSale: "false",
+    isOnSale: true,
   },
 ];
 
-const image = [
+const productImages = [
   "../assets/joystick.png",
   "../assets/joystick.png",
-  "/assets/computer.png",
-  "/assets/chair.png",
+  "../assets/computer.png",
+  "../assets/chair.png",
 ];
 
 const searchInput = document.getElementById("input-search-product");
@@ -115,13 +115,62 @@ for (let i = 0; i < categories.length; i++) {
   categoriesBox.append(span);
 }
 
+const bestSellingProducts = [
+  {
+    id: "1",
+    name: "The North Coat ",
+    originalPrice: "360",
+    discountPrice: "260",
+    review: "65",
+    image: "",
+    saleAmount: "0",
+    isOnSale: false,
+  },
+  {
+    id: "2",
+    name: "Gucci duffle bag",
+    originalPrice: "960",
+    discountPrice: "1160",
+    review: "65",
+    image: "",
+    saleAmount: "0",
+    isOnSale: false,
+  },
+  {
+    id: "3",
+    name: "RGB liquid CPU Cooler ",
+    originalPrice: "160",
+    discountPrice: "170",
+    review: "65",
+    image: "",
+    saleAmount: "0",
+    isOnSale: false,
+  },
+  {
+    id: "4",
+    name: " Small BookSelf",
+    originalPrice: "360",
+    review: "65",
+    image: "",
+    saleAmount: "0",
+    isOnSale: false,
+  },
+];
+
+const bestSellingImages = [
+  "../assets/coat.jpg",
+  "../assets/bag.png",
+  "../assets/cooler.png",
+  "../assets/bookself.png",
+];
+
 const productListLayout = document.getElementById("productList");
 
 const bestSellingProduct = document.getElementById("bestSellingProduct");
 
-createProduct(productListLayout, productList); // you are calling a function
+createProduct(productListLayout, productList, productImages); // you are calling a function
 
-createProduct(bestSellingProduct); //you are calling a function
+createProduct(bestSellingProduct, bestSellingProducts, bestSellingImages); //you are calling a function
 
 const newProducts = [
   {
@@ -187,5 +236,27 @@ for (let i = 0; i < newProducts.length; i++) {
   iconBottom.append(iconBox);
 }
 
+const firstNumber = document.getElementById("firstNumber");
+
+const secondNumber = document.getElementById("secondNumber");
+
+const result = document.getElementById("result");
+
+let value1 = 0;
+let value2 = 0;
+firstNumber.addEventListener("input", function (event) {
+  value1 = event.target.value;
+});
+
+secondNumber.addEventListener("input", function (event) {
+  value2 = event.target.value;
+});
+
+function calculate() {
+  let third = "Result";
+  const sum = addTwoNumbers(Number(value1), Number(value2), third);
+
+  result.textContent = sum;
+}
 // getElementById access to element
 // createElement create a new element

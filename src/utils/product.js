@@ -1,4 +1,4 @@
-function createProduct(layout, productList = []) {
+function createProduct(layout, productList = [], productImages) {
   const emptyContainer = document.createElement("div");
   emptyContainer.id = "emptyContainer";
   emptyContainer.className = "empty-container";
@@ -68,7 +68,7 @@ function createProduct(layout, productList = []) {
       productRanking.id = "productRanking";
       productRanking.className = "product-ranking";
 
-      productImageSrc.src = "image[i]"; //images[i];
+      productImageSrc.src = productImages[index]; //images[i];
       productImage.append(productImageSrc);
       productTop.append(productImage);
       if (productList[index].isOnSale) {
