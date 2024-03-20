@@ -93,6 +93,11 @@ function createProduct(layout, productList = [], productImages) {
       productName.append(productRanking);
 
       productContainer.append(productName);
+
+      productContainer.addEventListener("click", function () {
+        window.location.replace("/src/pages/description.html");
+      });
+
       layout.append(productContainer);
     }
   }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <div class="main-layout product-description">
+      <div class="main-header">
+        <div class="main-inner-header product-description-header">
+          <span>Exclusive</span>
+          <div class="middle-section">
+            <ul>
+              <li>Home</li>
+              <li>Contact</li>
+              <li>About</li>
+              <li>Sign Up</li>
+            </ul>
+          </div>
+          <div class="right-section">
+            <div class="input-box">
+              <input
+                type="text"
+                name="search"
+                id="input-search-product"
+                placeholder="What are you looking for?"
+              />
+              <img
+                src="../assets/search.png"
+                alt="search"
+                onclick="searchProduct()"
+              />
+            </div>
+            <div class="like-box">
+              <img src="../assets/wishlist.png" alt="like" />
+            </div>
+            <div class="cart-box">
+              <img src="../assets/cart.png" alt="cart" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="main-description-content">
+        <div class="description-link">
+          <span class="text" id="Accountant">Account</span>
+          <span class="text">/</span>
+          <span class="text" id="Gaming">Gaming</span>
+          <span class="text">/</span>
+          <span id="Gamepad">Havic HV G-92 Gamepad</span>
+        </div>
+      </div>
+      <div class="product-description-info">
+        <div class="side-images">
+          <img src="../assets/pad1.png" alt="pad1" />
+          <img src="../assets/pad2.png" alt="pad2" />
+          <img src="../assets/pad3.png" alt="pad3" />
+          <img src="../assets/pad4.png" alt="pad4" />
+        </div>
+        <div class="banner-image">
+          <img src="../assets/pad5.png" alt="pad5" />
+        </div>
+        <div class="product-main-information">
+          <div class="description-header">
+            <span class="product-name">Havic HV G-92 Gamepad</span>
+            <div class="product-review">
+              <span class="reviews"
+                >**** (150 Reviews) |
+                <span class="in-stock">In Stock</span></span
+              >
+            </div>
+            <div class="product-price">$192.00</div>
+            <p>
+              PlayStation 5 Controller Skin High quality vinyl with air channel
+              adhesive for easy bubble free install & mess free removal Pressure
+              sensitive.
+            </p>
+            <div class="product-colors">
+              <span>Colors:</span>
+              <span class="circle blue"></span>
+              <span class="circle red"></span>
+            </div>
+            <div class="product-size">
+              <span>Size:</span>
+              <span class="product-sizes">XS</span>
+              <span class="product-sizes">S</span>
+              <span class="product-sizes-3">M</span>
+              <span class="product-sizes">L</span>
+              <span class="product-sizes">LX</span>
+            </div>
+            <div class="product-calculator">
+              <div class="calculation-left">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+              <div class="calculation-right">
+                <button>Buy Now</button>
+                <img src="../assets/heart.png" alt="heart" />
+              </div>
+            </div>
+
+            <div class="product-delivery-info">
+              <div class="product-free-delivery">
+                <img src="../assets/delivery$.png" alt="delivery" />
+                <span>Free Delivery</span>
+                <span>Enter your postal code for Delivery Availability</span>
+              </div>
+              <div class="product-return-delivery">
+                <img src="../assets/return.png" alt="return" />
+                <span>Return Delivery</span>
+                <span>Free 30 Days Delivery Returns. Details</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let accountTitle = "Accountant";
+      let gamingTitle = "Gaming";
+      let padTitle = "Gamepad";
+
+      const account = document.getElementById("account");
+      account.textContent = accountTitle;
+      console.log(account);
+    </script>
+  </body>
+</html>
